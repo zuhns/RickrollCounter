@@ -9,12 +9,24 @@ const HallOfFame: React.FC = () => {
   );
 
   const getCreativityStars = (creativity: number) => {
-    return Array.from({ length: 5 }, (_, i) => (
-      <Star
-        key={i}
-        className={`h-4 w-4 ${i < creativity ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}
-      />
-    ));
+    return Array.from({ length: 5 }, (_, i) => {
+      if (creativity >= i + 1) {
+        // Stella piena
+        return <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />;
+      } else if (creativity >= i + 0.5) {
+        // Mezza stella (usiamo il bordo come riempimento visivo parziale)
+        return (
+          <Star
+            key={i}
+            className="h-4 w-4 text-yellow-400"
+            style={{ clipPath: 'inset(0 50% 0 0)' }} // metà sinistra visibile
+          />
+        );
+      } else {
+        // Stella vuota
+        return <Star key={i} className="h-4 w-4 text-gray-300" />;
+      }
+    });
   };
 
   const getPerpetratorColor = (perpetrator: string) => {
