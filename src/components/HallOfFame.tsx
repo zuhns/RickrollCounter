@@ -14,13 +14,14 @@ const HallOfFame: React.FC = () => {
         // Stella piena
         return <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />;
       } else if (creativity >= i + 0.5) {
-        // Mezza stella (usiamo il bordo come riempimento visivo parziale)
         return (
-          <Star
-            key={i}
-            className="h-4 w-4 text-yellow-400"
-            style={{ clipPath: 'inset(0 50% 0 0)' }} // metà sinistra visibile
-          />
+          <span key={i} className="relative w-4 h-4 inline-block">
+            <Star className="h-4 w-4 text-gray-300 absolute" />
+            <Star
+              className="h-4 w-4 text-yellow-400 absolute"
+              style={{ clipPath: 'inset(0 50% 0 0)' }}
+            />
+          </span>
         );
       } else {
         // Stella vuota
