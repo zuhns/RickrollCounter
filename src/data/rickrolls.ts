@@ -9,7 +9,8 @@ export const hallOfFameEntries: RickrollEntry[] = [
     date: '2024-01-15',
     method: 'File eseguibile camuffato',
     creativity: 5,
-    timestamp: new Date('2024-01-15T14:30:00')
+    timestamp: new Date('2024-01-15T14:30:00'),
+    success: true
   },
   {
     id: '2',
@@ -19,7 +20,8 @@ export const hallOfFameEntries: RickrollEntry[] = [
     date: '2024-01-20',
     method: 'Link camuffato',
     creativity: 4,
-    timestamp: new Date('2024-01-20T10:15:00')
+    timestamp: new Date('2024-01-20T10:15:00'),
+    success: false
   },
   {
     id: '3',
@@ -29,7 +31,8 @@ export const hallOfFameEntries: RickrollEntry[] = [
     date: '2024-01-25',
     method: 'QR Code camuffato',
     creativity: 5,
-    timestamp: new Date('2024-01-25T16:45:00')
+    timestamp: new Date('2024-01-25T16:45:00'),
+    success: true
   },
   {
     id: '4',
@@ -39,7 +42,8 @@ export const hallOfFameEntries: RickrollEntry[] = [
     date: '2024-02-01',
     method: 'Presentazione camuffata',
     creativity: 4,
-    timestamp: new Date('2024-02-01T11:20:00')
+    timestamp: new Date('2024-02-01T11:20:00'),
+    success: true
   },
   {
     id: '5',
@@ -49,6 +53,7 @@ export const hallOfFameEntries: RickrollEntry[] = [
     date: '2024-02-10',
     method: 'Sito web camuffato',
     creativity: 5,
-    timestamp: new Date('2024-02-10T09:30:00')
+    timestamp: new Date('2024-02-10T09:30:00'),
+    success: true
   }
 ];

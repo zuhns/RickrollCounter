@@ -13,6 +13,7 @@ export interface RickrollEntry {
   method: string;
   creativity: number; // 1-5 stars
   timestamp: Date;
+  success: boolean;
 }
 
 export interface Rule {
