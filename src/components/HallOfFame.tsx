@@ -14,9 +14,12 @@ const HallOfFame: React.FC = () => {
         // Stella piena
         return <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />;
       } else if (creativity >= i + 0.5) {
+        // Mezza stella: sinistra gialla, destra grigia
         return (
           <span key={i} className="relative w-4 h-4 inline-block">
+            {/* Stella grigia dietro */}
             <Star className="h-4 w-4 text-gray-300 absolute" />
+            {/* Stella gialla tagliata a sinistra */}
             <Star
               className="h-4 w-4 text-yellow-400 absolute"
               style={{ clipPath: 'inset(0 50% 0 0)' }}
