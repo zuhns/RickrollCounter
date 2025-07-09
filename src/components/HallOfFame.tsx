@@ -1,7 +1,8 @@
 import React from 'react';
 import { clsx } from 'clsx';
-import { Trophy, Calendar, User, Lightbulb, Star } from 'lucide-react';
+import { Trophy, Calendar, User, Lightbulb } from 'lucide-react';
 import { hallOfFameEntries } from '../data/rickrolls';
+import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
 
 const HallOfFame: React.FC = () => {
   const sortedEntries = [...hallOfFameEntries].sort(
@@ -12,23 +13,21 @@ const HallOfFame: React.FC = () => {
     return Array.from({ length: 5 }, (_, i) => {
       if (creativity >= i + 1) {
         // Stella piena
-        return <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />;
+        return <AiFillStar key={i} className="text-yellow-400 w-4 h-4" />;
       } else if (creativity >= i + 0.5) {
-        // Mezza stella: sinistra gialla, destra grigia
+        // Mezza stella (gialla sopra, grigia sotto)
         return (
           <span key={i} className="relative w-4 h-4 inline-block">
-            {/* Stella grigia dietro */}
-            <Star className="h-4 w-4 text-gray-300 absolute" />
-            {/* Stella gialla tagliata a sinistra */}
-            <Star
-              className="h-4 w-4 text-yellow-400 absolute"
+            <AiOutlineStar className="text-gray-300 absolute" />
+            <AiFillStar
+              className="text-yellow-400 absolute"
               style={{ clipPath: 'inset(0 50% 0 0)' }}
             />
           </span>
         );
       } else {
         // Stella vuota
-        return <Star key={i} className="h-4 w-4 text-gray-300" />;
+        return <AiOutlineStar key={i} className="text-gray-300 w-4 h-4" />;
       }
     });
   };
