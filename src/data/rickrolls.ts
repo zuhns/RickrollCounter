@@ -60,6 +60,17 @@ export const hallOfFameEntries: RickrollEntry[] = [
     id: '6',
     perpetrator: 'Zuhns',
     victim: 'John',
+    description: 'Creato un finto video scacchi dove si nascondeva un rickroll che fallì a causa della anteprima video',
+    date: '2025-06-08',
+    method: 'Video Youtube fake: "https://www.youtube.com/watch?v=UzO7xc3hKqw"',
+    creativity: 2.5,
+    timestamp: new Date('2025-06-08T09:30:00'),
+    success: false
+  },
+  {
+    id: '7',
+    perpetrator: 'Zuhns',
+    victim: 'John',
     description: 'Creato una mappa su Pummel Party chiamata "Boxing Arena" che in realtà era un rickroll fatto frame dopo frame',
     date: '2024-02-10',
     method: 'Pummel Party map',
